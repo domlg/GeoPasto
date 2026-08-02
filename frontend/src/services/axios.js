@@ -4,7 +4,7 @@ import config from "../../config";
 const API_URL = `${config.API_BASE_URL}/api`;
 
 const axiosInstance = axios.create({
-  baseURL: API_URL,
+  baseURL: config.API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },

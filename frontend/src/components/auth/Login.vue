@@ -35,7 +35,7 @@ const userCredentials = ref({
 
 const login = async () => {
   try {
-    const response = await auth.axiosInstance.post("token/", {
+    const response = await auth.axiosInstance.post("/api/token/", {
       username: userCredentials.value.username,
       password: userCredentials.value.password,
     });

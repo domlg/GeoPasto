@@ -42,7 +42,7 @@ export const useMainStore = defineStore("main", {
     async fetchUserPermissions() {
       if (Object.keys(this.userPermissions).length > 0) return;
       try {
-        const response = await auth.axiosInstance.get("/userpermissions/");
+        const response = await auth.axiosInstance.get("/api/userpermissions/");
         this.username = response.data.username;
         this.firstName = response.data.first_name;
         this.lastName = response.data.last_name;
