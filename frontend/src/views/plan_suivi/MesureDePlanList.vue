@@ -79,8 +79,8 @@ const filters = ref([
 
 onMounted(async () => {
   const [upRes, enjeuRes] = await Promise.all([
-    auth.axiosInstance.get("/unitePastorale/light/"),
-    auth.axiosInstance.get("/enjeu/"),
+    auth.axiosInstance.get("/api/unitePastorale/light/"),
+    auth.axiosInstance.get("/api/enjeu/"),
   ]);
   upOptions.value = upRes.data.map((u) => ({
     label: u.nom_up,

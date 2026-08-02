@@ -61,7 +61,7 @@ const cheptelFilters = ref([
 ]);
 
 onMounted(async () => {
-  const r = await auth.axiosInstance.get("/unitePastorale/light/");
+  const r = await auth.axiosInstance.get("/api/unitePastorale/light/");
   upOptions.value = r.data.map((f) => ({ label: f.nom_up, value: f.id_unite_pastorale }));
 });
 </script>
