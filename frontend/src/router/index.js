@@ -946,7 +946,7 @@ router.beforeEach(async (to, from, next) => {
   const storedUser = localStorage.getItem("user");
   if (to.meta.requiresAuth && !storedUser) {
     //mainStore.setErrorMessage("Vous devez être connecté pour accéder à cette page.")
-    return next({ name: "Login" });
+    return next({ name: "login" });
   }
 
   // 🛑 si route protégée avec permissions spécifiques
